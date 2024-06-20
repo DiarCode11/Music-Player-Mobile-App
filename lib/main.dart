@@ -35,7 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // Daftar konten untuk setiap tab
   List<Widget> _tabViews = [
-    MusicNotFound(),
     SongTab(),
     ArtistTab(),
     AlbumTab(),

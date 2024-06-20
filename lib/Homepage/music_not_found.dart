@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../SearchPage/search_music_page.dart';
 
 class MusicNotFound extends StatelessWidget {
   const MusicNotFound({super.key});
@@ -8,26 +9,36 @@ class MusicNotFound extends StatelessWidget {
     return Container(
       height: 450,
       color: Colors.black, // Warna latar belakang untuk konten tab Lagu
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.music_off_sharp, // Icon untuk Lagu
-              color: Colors.grey[500],
-              size: 50,
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SearchMusic(),
             ),
-            SizedBox(height: 10), // Jarak antara ikon dan teks
-            Text(
-              'klik disini untuk mencari lagu',
-              style: TextStyle(
-                color: Colors.grey[500], 
-                fontSize: 20,
+          );
+        },
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.music_off_sharp, // Icon untuk Lagu
+                color: Colors.grey[500],
+                size: 50,
               ),
-            ),
-          ],
+              SizedBox(height: 10), // Jarak antara ikon dan teks
+              Text(
+                'klik disini untuk mencari lagu',
+                style: TextStyle(
+                  color: Colors.grey[500], 
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
+      )
     );
   }
 }

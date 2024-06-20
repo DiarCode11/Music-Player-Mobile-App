@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class PlaylistPage extends StatefulWidget {
-  const PlaylistPage({super.key});
+class SearchMusic extends StatefulWidget {
+  const SearchMusic({super.key});
 
   @override
-  State<PlaylistPage> createState() => _PlaylistPageState();
+  State<SearchMusic> createState() => _SearchMusicState();
 }
 
-class _PlaylistPageState extends State<PlaylistPage> {
+class _SearchMusicState extends State<SearchMusic> {
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Playlist '),
+        title: Text('Cari Musik'),
         backgroundColor: Colors.black, // Ubah background AppBar menjadi hitam
         iconTheme: IconThemeData(
           color: Colors.white, // Ubah warna ikon kembali menjadi putih
@@ -25,13 +27,7 @@ class _PlaylistPageState extends State<PlaylistPage> {
       ),
       backgroundColor: Colors.black,
       body: Center(
-        child: Text(
-          'Playlist',
-          style: TextStyle(
-            color: Colors.white, // Ubah warna teks menjadi putih
-            fontSize: 20,
-          ),
-        ),
+        child: CircularProgressIndicator(),
       ),
     );
   }
